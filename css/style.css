@@ -1,0 +1,102 @@
+#row1{
+    background: #3b5998;
+    color:#FFF;
+    padding:3% 0;
+}
+
+#comments{
+    width:50%;
+    font-size:1.4em;
+}
+
+textarea{
+    width:100%;
+    height:20%;
+}
+
+#text{
+    font-size:1.4em;
+
+}
+
+#main{
+    padding-bottom: 10%;
+}
+
+#formCont{
+    width:50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    color: #3b5998;
+}
+
+#login1{
+    margin-left: 60%;
+    background: #3b5998;
+    color: #FFF;
+    border: none;
+    padding: 2%;
+}
+
+#signup{
+    background: #3b5998;
+    color: #FFF;
+    padding: 2%;
+}
+
+#login2{
+    background: #3b5998;
+    color: #FFF;
+    padding: 2%;
+}
+
+#logout{
+    background: #FFF;
+    color:#3b5998;
+    padding: 1% 2% 1% 2%;
+    font-size: 1.3em;
+    float: right;
+    overflow: hidden;
+    clear: both;
+
+}
+
+#logout:hover{
+    background: #3b5998;
+    color: #FFF;
+}
+
+#from{
+    font-size: 0.9em;
+}
+
+#bod{
+    font-size: 0.7em;
+}
+
+#form-container{
+    margin-top:10%;
+}
+
+#chat-head{
+    color: #3b5998;
+}
+
+#namer{
+    color: #3b5998;
+
+}
+
+img[alt="logo"]{
+    float: left;
+    overflow: hidden;
+    clear: both;
+}
+
+.head{
+    margin-left:27%;
+}
+
+.head1{
+    margin-left:35%;
+}

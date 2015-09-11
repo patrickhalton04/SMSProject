@@ -1,0 +1,44 @@
+<div id="main" ng-controller="chaterController" class="container">
+
+    <div id="row1" class="row">
+            <span ng-show="authData">
+  <a href="#" id="logout" ng-click="authObj.$unauth()">Logout</a>
+</span>
+
+        <div class="col-lg-12">
+            <img src="img/PILOGO1.png" alt="logo"/>
+            <h1 class="head">Welcome to performance.issues()!</h1>
+            <h2 class="head1">Every developer has them</h2>
+        </div>
+    </div>
+
+<h1>Chat made by: {{authData.password.email}}</h1><hr>
+
+
+    <div class="row">
+        <div class="col-lg-6" id="comments">
+
+            <div ng-repeat="x in privChat" class="comment">
+
+                        <span id="text"><h2 id="user">{{x.from}}</h2><h3 id="commenting">{{x.body}}</h3>
+                        </span>
+
+            </div>
+
+            <div id="textWrap">
+
+                <textarea rows="7" ng-model="newComment"></textarea>
+
+                <button ng-click="addToChat($event)">Comment</button>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+
+
+    </div>
+
+</div>

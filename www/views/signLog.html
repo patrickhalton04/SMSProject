@@ -1,0 +1,75 @@
+
+<div id="row1" class="row">
+    <div class="col-lg-12">
+        <img src="img/PILOGO1.png" alt="logo"/>
+        <h1 class="head">Welcome to performance.issues()!</h1>
+        <h2 class="head1">Every developer has them</h2>
+    </div>
+</div>
+
+
+
+<div class="container" id="formCont" ng-controller="formController">
+
+    <span ng-show="authData">
+  {{ authData.password.email }} | <a href="#" ng-click="authObj.$unauth()">Logout</a>
+</span>
+
+    <div class="col-lg-12">
+
+        <form ng-hide="signIn">
+
+            <h1>Sign Up</h1>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input ng-model="newUser.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input ng-model="newUser.username" type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input ng-model="newUser.pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <button id="signup" ng-click="addForm()" class="btn btn-default">Sign Up</button>
+
+            <button id="login1" ng-click="signIn = true">Click Here To Login</button>
+
+            <span ng-show="errMess2" id="message">{{errMess2}}</span>
+
+
+
+        </form>
+
+        <form ng-show="signIn">
+
+            <h1>Sign In</h1>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input ng-model="login.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input ng-model="login.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+
+            <button id="login2" ng-click="login()" class="btn btn-default">Login</button>
+
+        </form>
+
+        <span ng-show="errMess" id="message">{{errMess}}</span>
+
+    </div>
+
+
+
+
+</div>
