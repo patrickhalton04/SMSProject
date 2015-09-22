@@ -25,12 +25,14 @@ angular.module('smsApp', ['ngRoute','firebase','ui.bootstrap']).config(["$routeP
 
 }])
 
-.controller('mainController',["$scope","$firebaseArray","$firebaseAuth","$location", function ($scope,$firebaseArray,$firebaseAuth,$location) {
+.controller('mainController',["$scope","$firebaseArray","$firebaseObject","$firebaseAuth","$location", function ($scope,$firebaseArray,$firebaseObject, $firebaseAuth,$location) {
 
     var ref  = new Firebase("https://smrproj.firebaseio.com/comments");
     var ref2  = new Firebase("https://smrproj.firebaseio.com/chat");
 
-        $scope.makeChat = $firebaseArray(ref2);
+        $scope.makeChat = $firebaseObject(ref2);
+        $scope.makeChat1 = $firebaseArray(ref2);
+
         $scope.authObj = $firebaseAuth(ref);
         $scope.comments = $firebaseArray(ref);
 
@@ -51,32 +53,50 @@ angular.module('smsApp', ['ngRoute','firebase','ui.bootstrap']).config(["$routeP
 
         $scope.authObj.$onAuth(function(authData) {
             if (authData) {
-                console.log(authData);
-                console.log("im in:", authData.uid);
                 $scope.authData = authData;
+                var ref3  = new Firebase("https://smrproj.firebaseio.com/users/" + $scope.authData.uid);
+                $scope.userChatId = $firebaseArray(ref3);
+
+
             } else {
                 $location.path("/");
-                console.log("Logged out");
             }
         });
 
+
         $scope.addChat = function(){
 
-            $scope.makeChat.$add({
+            $scope.makeChat1.$add({
                 chat: $scope.newChat,
                 user: $scope.authData.password.email
-            })
-                .then(function(ref) {
-                    var id = ref.key();
-                    console.log("added record with id " + id);
-                    $scope.makeChat.$indexFor(id); // returns location in the array
-                    $location.path("/userChat/"+ id);
-                });
 
-        };
+            }).then(
+                function(ref){
+                    $location.path("/userChat/" + ref.key());
+                    $scope.userChatId.$add({
+                        uid : ref.key()
+                    })
+
+                }
+            );
+
+        }
 
 }])
+ .filter('userChats', function() {
+        return function(allChats, myChatKeys) {
+            var myChats = [];
+            angular.forEach(myChatKeys, function(value,key){
 
+                var key = value.uid;
+                var chat = allChats[key]
+                chat.$id = key
+                myChats.push(chat);
+            });
+
+            return myChats
+        }
+    })
 .controller('formController',["$scope","$firebaseArray","$firebaseAuth","$location", function ($scope,$firebaseArray,$firebaseAuth,$location) {
 
     var userDoc = new Firebase("https://smrproj.firebaseio.com");
@@ -154,18 +174,21 @@ angular.module('smsApp', ['ngRoute','firebase','ui.bootstrap']).config(["$routeP
             }
         };
 
+
+        $scope.back = function(){
+
+            $location.path("/chat");
+            console.log("button work");
+
+        };
+
         $scope.authObj.$onAuth(function(authData) {
             if (authData) {
-        console.log(authData);
-                console.log("im in:", authData.uid);
                 $scope.authData = authData;
             } else {
                 $location.path("/");
-                console.log("Logged out");
             }
         });
-
-console.log($scope.privChat);
 
     }]);
 

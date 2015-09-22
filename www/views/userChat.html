@@ -1,18 +1,24 @@
 <div id="main" ng-controller="chaterController" class="container">
 
     <div id="row1" class="row">
-            <span ng-show="authData">
-  <a href="#" id="logout" ng-click="authObj.$unauth()">Logout</a>
-</span>
+
+        <button type="button" ng-click="back()" id="back">Back To Public</button>
+
+        <ul id="logs">
+            <li id="space"><a href="#" id="logout" ng-click="authObj.$unauth()">Logout</a></li>
+            <li id="in"> Hello: {{authData.password.email}}</li>
+
+        </ul>
 
         <div class="col-lg-12">
             <img src="img/PILOGO1.png" alt="logo"/>
+            <h4 id="adding">To add people to chat send them the URL</h4>
             <h1 class="head">Welcome to performance.issues()!</h1>
             <h2 class="head1">Every developer has them</h2>
         </div>
     </div>
 
-<h1>Chat made by: {{authData.password.email}}</h1><hr>
+<h1 id="user2">You are in: {{authData.password.email}}</h1><hr>
 
 
     <div class="row">
@@ -37,7 +43,7 @@
 
         <div class="col-lg-6">
 
-
+        <img src="img/shhh.jpeg" alt="shh">
 
     </div>
 

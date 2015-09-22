@@ -51,13 +51,13 @@ textarea{
 }
 
 #logout{
-    background: #FFF;
-    color:#3b5998;
+    color:#FFF;
     padding: 1% 2% 1% 2%;
-    font-size: 1.3em;
-    float: right;
-    overflow: hidden;
-    clear: both;
+    font-size: 1em;
+
+    /*float: right;*/
+    /*overflow: hidden;*/
+    /*clear: both;*/
 
 }
 
@@ -93,10 +93,60 @@ img[alt="logo"]{
     clear: both;
 }
 
+
 .head{
     margin-left:27%;
 }
 
 .head1{
     margin-left:35%;
+}
+
+#public{
+    color: #3b5998;
+}
+
+img[alt="shh"]{
+    margin-left: 20%;
+}
+
+#user2{
+    color: #3b5998;
+}
+
+#back{
+    background: transparent;
+    color:#FFF;
+    border: none;
+    padding: 1% 2% 1% 2%;
+    font-size: 1.3em;
+    float: left;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 3%;
+}
+
+#logged{
+    float: right;
+
+}
+
+#logs li{
+    display: inline-block;
+    float: right;
+    margin-right: 2%;
+}
+
+#space{
+    margin-right: 2%;
+    margin-top: 2.5px;
+}
+
+#in{
+    font-size: 1.2em;
+}
+
+#adding{
+    text-align: center;
+    margin-right: 13%;
 }

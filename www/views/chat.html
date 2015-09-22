@@ -1,12 +1,12 @@
-<div id="main" ng-controller="mainController" class="container">
+<div id="main" class="container">
 
 
     <div id="row1" class="row">
+   <ul id="logs">
+       <li id="space"><a href="#" id="logout" ng-click="authObj.$unauth()">Logout</a></li>
+       <li id="in"> Hello! {{authData.password.email}}</li>
 
-  <a href="#" id="logout" ng-click="authObj.$unauth()">Logout</a>
-
-
-
+   </ul>
 
         <div class="col-lg-12">
             <img src="img/PILOGO1.png" alt="logo"/>
@@ -18,9 +18,20 @@
     <div class="row">
         <div class="col-lg-6" id="comments">
 
+
+            <h2>Your Private Chats:</h2>
+
+
+            <div ng-repeat="chat in makeChat | userChats:userChatId" class="comment">
+                    <span id="text"> <a href="#/userChat/{{ chat.$id }}">{{chat.chat}}</a>
+                    </span>
+
+            </div>
+            <h2 id="public">Public Chat:</h2>
+
             <pre><div ng-repeat="x in comments" class="comment">
 
-                    <span id="text"><p id="from">{{x.from}} :</p><p id="bod">{{x.body}}</0>
+                    <span id="text"><p id="from">{{x.from}} :</p><p id="bod">{{x.body}}</p>
                     </span>
 
             </div></pre>
@@ -51,6 +62,8 @@
                 <button id="signup" ng-click="addChat()" class="btn btn-default">Create Chat</button>
 
             </div>
+
+            <img src="img/comp.jpeg" alt="comp">
 
 
 
