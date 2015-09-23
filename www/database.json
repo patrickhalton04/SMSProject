@@ -1,0 +1,17 @@
+{
+    "chat": [
+        "user",
+        "body"
+    ],
+    "comments": [
+        "body",
+        "from"
+    ],
+    "users": {
+        "id":[
+            "uid"
+        ]
+    }
+
+}
+
