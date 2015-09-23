@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47143959-2cd5-437e-8a7d-1b5e9bbd18d1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="47143959-2cd5-437e-8a7d-1b5e9bbd18d1" name="Default" comment="" />
     <ignored path="SMSProject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,7 +80,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="6" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.46455225" vertical-offset="1491" max-vertical-offset="2355">
+            <state line="115" column="0" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.43656716" vertical-offset="1491" max-vertical-offset="2355">
               <folding />
             </state>
           </provider>
@@ -301,7 +299,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="113" width="1396" height="682" extended-state="1" />
+    <frame x="7" y="113" width="1396" height="682" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -438,7 +436,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="6" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.46455225" vertical-offset="1491" max-vertical-offset="2355">
+        <state line="115" column="0" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.43656716" vertical-offset="1491" max-vertical-offset="2355">
           <folding />
         </state>
       </provider>
